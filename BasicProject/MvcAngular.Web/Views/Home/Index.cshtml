@@ -12,10 +12,37 @@
             <p>Titill: </p><input type="text" /> <p>URL: </p></p><input type="url" /> <i class="icon-plus icon-2x"></i>
         </div>
         <div class="lecturelist span12">
-            <ul>
-                
-                <li ng-repeat="lecture in lectures">{{lecture.LectureTitle}}</li>
-            </ul>
+
+            <div class="accordion" id="lectureList">
+                <div class="accordion-group" ng-repeat="lecture in lectures">
+                    <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#lectureList" href="#lecture{{lecture.ID}}">{{lecture.LectureTitle}}<span class="pull-right">{{lecture.TeacherName}}</span></a>
+                    </div>
+                    <div id="lecture{{lecture.ID}}" class="accordion-body collapse">
+                        <div class="accordion-inner">
+                            <div class="row-fluid">
+                                <div class="span6">
+                                    <iframe width="560" height="315" src="{{lecture.LectureURL}}" frameborder="0" allowfullscreen></iframe>
+                                </div>
+                                <div class="span6">
+                                    <a href="#" class="pull-right">Edit <i class="icon-pencil"></i></a>
+                                    <ul class="comments clearfix">
+                                        <li>
+                                            <a href="#">Ólafur Nils</a>
+                                            <p class="comment">Etiam in orci leo, et ultrices leo. Pellentesque interdum, nisi sed vulputate pretium, nulla justo facilisis lacus, ut pretium tortor nunc vitae lectus.</p>
+                                        </li>
+                                        <li>
+                                            <a href="#">Kristjan Lund</a>
+                                            <p class="comment">Pellentesque nisl erat, pellentesque nec auctor sed, vestibulum at justo.</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- End of accordion -->
+
 
         </div>
     </div>

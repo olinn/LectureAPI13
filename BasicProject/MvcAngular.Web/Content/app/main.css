@@ -15,6 +15,15 @@ body {
 	width: 900px;
 }
 
+.comments li {
+    list-style: none;
+    border-top: 1px solid #ddd;
+}
+
+.comments li:first-child {
+    border-top: 0px none;
+}
+
 /* Large desktop */
 @media (min-width: 1200px) { 
 	.addLecture p {
