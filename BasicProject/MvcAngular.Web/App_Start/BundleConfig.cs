@@ -12,7 +12,7 @@ namespace MvcAngular.Web
             // minification (takes the already minified files).
 
             // CSS Bundles
-
+            
             bundles.Add(new Bundle("~/Content/files/css-one")
                 .Include("~/Content/bootstrap/bootstrap.css"));
 

@@ -1,12 +1,23 @@
 
 
 /* ==========================================================================
-   Author's custom styles
+   Custom CSS
    ========================================================================== */
 
+#content {
+	width: 900px;
+}
 
+@media (min-width: 1200px) {
+	#content {
+		width: 700px;
+	}
+}
 
+.thebox {
 
+	border: 1px solid black;
+}
 
 
 
