@@ -6,7 +6,7 @@
 
     <div class="thebox row">
         <div class="titlebar span12">
-            <h3>WEPO 2013    - {{ name }} </h3>        
+            <h3 ng-cloak>WEPO 2013    - {{ name }} </h3>        
          </div>
         <div class="addLecture span12">
            <p>Titill: </p><input type="text" ng-model="lecture.LectureTitle" /> <p>URL: </p></p><input type="url" ng-model="lecture.LectureURL"/> <i class="icon-plus"  ng-click="submit(lecture)"></i>
@@ -17,7 +17,7 @@
             <div class="accordion" id="lectureList">
                 <div class="accordion-group" ng-repeat="lecture in lectures" lecture-repeat-directive>
                     <div class="accordion-heading">
-                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#lectureList" href="#lecture{{lecture.ID}}">{{lecture.LectureTitle}} - {{lecture.PubDate}}
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#lectureList" href="#lecture{{lecture.ID}}" ng-cloak>{{lecture.LectureTitle}} - {{lecture.PubDate}}
                            </span> <span class="pull-right">{{lecture.TeacherName}}</span></a>
                     </div>
                     <div id="lecture{{lecture.ID}}" class="accordion-body collapse">
