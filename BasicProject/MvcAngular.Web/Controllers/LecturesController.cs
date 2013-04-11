@@ -17,6 +17,7 @@ namespace MvcAngular.Web.Controllers
         private AppDataContext db = new AppDataContext();
 
         // GET api/Lectures
+        
         public IEnumerable<Lecture> GetLectures()
         {
             return db.Lectures.AsEnumerable();
