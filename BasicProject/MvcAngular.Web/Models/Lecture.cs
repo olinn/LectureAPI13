@@ -13,5 +13,8 @@ namespace MvcAngular.Web.Models
         public string TeacherName { get; set; }
         public DateTime PubDate { get; set; }
 
+		public Lecture() {
+			PubDate = DateTime.Now;
+		}
     }
 }
