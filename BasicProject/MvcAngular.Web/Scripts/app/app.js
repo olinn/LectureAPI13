@@ -15,7 +15,10 @@ app.directive('lectureRepeatDirective', function ($http) {
             });
         });
 
-        scope.$watch('thing', function () {
+        var pubAgo = Date.now() - new Date(scope.lecture.PubDate).getTime();
+        scope.lecture.PubDate = Math.floor(pubAgo / 60000) + ' minutes ago';
+
+        scope.$watch('lecture', function () {
             // Called when the scope is updated/changed. we need?
         });
     };
