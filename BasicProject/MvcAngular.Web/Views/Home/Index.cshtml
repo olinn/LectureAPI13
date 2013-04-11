@@ -15,6 +15,7 @@
             <ul>
                 <li>This list should generate a list of awesome lectures <i class="icon-pencil"></i></li>
                 <li>But instead, it's just an empty sad list :(</li>
+                <li ng-repeat="lecture in lectures">{{lecture.LectureTitle}}</li>
             </ul>
 
         </div>
@@ -29,5 +30,7 @@
 </div> <!-- /container -->
 
 @section scripts {
-    <script src="@Url.Content("~/Scripts/app/homeIndex.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/app/app.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/app/services.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/app/controllers.js")" type="text/javascript"></script>
 }

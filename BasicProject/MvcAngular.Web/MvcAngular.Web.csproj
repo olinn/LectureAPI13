@@ -320,7 +320,9 @@
     <Content Include="Scripts\angular\i18n\angular-locale_zh-hk.js" />
     <Content Include="Scripts\angular\i18n\angular-locale_zh-tw.js" />
     <Content Include="Scripts\angular\i18n\angular-locale_zh.js" />
-    <Content Include="Scripts\app\homeIndex.js" />
+    <Content Include="Scripts\app\app.js" />
+    <Content Include="Scripts\app\controllers.js" />
+    <Content Include="Scripts\app\services.js" />
     <Content Include="Scripts\bootstrap\bootstrap.js" />
     <Content Include="Scripts\bootstrap\bootstrap.min.js" />
     <Content Include="Scripts\bootstrap\modernizr-2.6.2-respond-1.1.0.js" />
