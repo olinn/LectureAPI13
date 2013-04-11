@@ -10,6 +10,7 @@ namespace MvcAngular.Web.Models
     {
         public DbSet<Lecture> Lectures { get; set; }
         public DbSet<Comment> Comments { get; set; }
+        public DbSet<User> Users { get; set; }
 
     }
 }
