@@ -57,7 +57,7 @@ body {
 @media (max-width: 767px) { 
 	.addLecture p
 	 {
-		display: inline;
+		
 		font-size: 1em;
 	} 
 
@@ -102,10 +102,13 @@ body {
 
 .addLecture input { 
 	margin-right: 0.5em;
-
 }
 
+.addLecture p {
 
+	display: inline;
+
+}
 
 
 
