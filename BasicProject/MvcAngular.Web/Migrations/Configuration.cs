@@ -9,7 +9,7 @@ namespace MvcAngular.Web.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
+            AutomaticMigrationsEnabled = false;
         }
 
         protected override void Seed(MvcAngular.Web.Models.AppDataContext context)

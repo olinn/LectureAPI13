@@ -137,7 +137,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\LectureAPI.sdf" />
+    <Content Include="App_Data\LectureDB.sdf" />
     <Content Include="Content\app\main.css" />
     <Content Include="Content\bootstrap\bootstrap-responsive.css" />
     <Content Include="Content\bootstrap\bootstrap-responsive.min.css" />
