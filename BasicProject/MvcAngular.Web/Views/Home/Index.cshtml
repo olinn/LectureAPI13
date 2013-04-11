@@ -4,20 +4,23 @@
 
 <div class="container" ng-app="myApp" ng-controller="PageCtrl">
 
-    <div class="row">
-        <div class="span12">
+    <div class="thebox row">
+        <div class="titlebar span12">
             <h3>WEPO 2013    - {{ name }} </h3>        
          </div>
-        <div class="span12">
+        <div class="addLecture span12">
+            <p>Titill: </p><input type="text" /> <p>URL: </p></p><input type="url" /> <i class="icon-plus icon-2x"></i>
+        </div>
+        <div class="lecturelist span12">
             <ul>
-                <li>This list should generate a list of awesome lectures</li>
+                <li>This list should generate a list of awesome lectures <i class="icon-pencil"></i></li>
                 <li>But instead, it's just an empty sad list :(</li>
             </ul>
 
         </div>
     </div>
 
-    <hr>
+    
 
     <footer>
         <p>&copy; MiNiGOD&OLiNN inc. 2013</p>

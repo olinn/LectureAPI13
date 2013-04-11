@@ -4,19 +4,105 @@
    Custom CSS
    ========================================================================== */
 
+
+
+
+body {
+
+	background-color:#3a6382;
+}
 #content {
 	width: 900px;
 }
 
-@media (min-width: 1200px) {
-	#content {
-		width: 700px;
+/* Large desktop */
+@media (min-width: 1200px) { 
+	.addLecture p {
+
+	display: inline;
+	font-size: 20px;
+				  }
+
+	input[type=text]
+	{
+		height:10px;
+		font-size:10px;
 	}
+
+	input[type=url]
+	{
+		height:10px;
+	}
+ }
+
+ 
+/* Portrait tablet to landscape and desktop */
+@media  (max-width: 979px) { 
+	.addLecture p 
+	{
+	display: inline;
+	font-size: 1.5em;
+	}
+
+	h3 
+	{
+		font-size: 20px;
+	}
+
 }
+}
+
+ 
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) { 
+	.addLecture p
+	 {
+		display: inline;
+		font-size: 1em;
+	} 
+
+	h3 
+	{
+		font-size: 18px;
+	}
+
+	
+}
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) { 
+
+
+	h3 
+	{
+		font-size: 12px;
+	}
+
+ }
+
 
 .thebox {
 
-	border: 1px solid black;
+	
+	background-color: #f7f7f7;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.titlebar {
+
+	
+}
+
+.lecturelist {
+
+
+}
+
+.addLecture input { 
+	margin-right: 0.5em;
+
 }
 
 
