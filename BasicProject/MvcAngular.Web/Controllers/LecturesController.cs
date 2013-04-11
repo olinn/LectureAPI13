@@ -34,6 +34,14 @@ namespace MvcAngular.Web.Controllers
             return lecture;
         }
 
+        // GET api/Lectures/5/Comments
+        public IEnumerable<Comment> GetLecture(int id, string more)
+        {
+            IEnumerable<Comment> comments = db.Comments.Where(x => x.Lecture.ID == id).AsEnumerable();
+
+            return comments;
+        }
+
         // PUT api/Lectures/5
         public HttpResponseMessage PutLecture(int id, Lecture lecture)
         {
