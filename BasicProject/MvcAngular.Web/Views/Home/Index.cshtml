@@ -9,7 +9,7 @@
 
     <div class="thebox row">
         <div class="titlebar span12">
-            <h3> <i class="icon-facetime-video icon-large"></i>  WEPO 2013 </h3>
+            <h3> <i class="icon-facetime-video icon-large" id="vidIcon"></i>  WEPO 2013 </h3>
          </div>
         <div class="addLecture span12">
             <form ng-submit="newLecture()">
@@ -39,7 +39,7 @@
                                        -->
                                     <ul class="comments clearfix">
                                         <li ng-repeat="comment in lecture.comments">
-                                            <p>{{comment.Name}} {{ comment.CommentTime|timeAgo }}</p>
+                                            <p><strong>{{comment.Name}} {{ comment.CommentTime|timeAgo }}</strong></p>
                                             <p class="comment">{{comment.CommentText}}</p>
                                         </li>
                                         <li ng-show="!lecture.comments.length">No comments.</li>
