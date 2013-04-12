@@ -38,7 +38,7 @@ namespace MvcAngular.Web.Controllers
         // GET api/Lectures/5/Comments
         public IEnumerable<Comment> GetLecture(int id, string more)
         {
-            IEnumerable<Comment> comments = db.Comments.Where(x => x.Lecture.ID == id).AsEnumerable();
+            IEnumerable<Comment> comments = db.Comments.Where(x => x.LectureID == id).AsEnumerable();
 
             return comments;
         }

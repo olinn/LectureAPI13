@@ -9,7 +9,7 @@
 
     <div class="thebox row">
         <div class="titlebar span12">
-            <h3 ng-cloak> <i class="icon-facetime-video icon-large"></i>  WEPO 2013 </h3>        
+            <h3> <i class="icon-facetime-video icon-large"></i>  WEPO 2013 </h3>
          </div>
         <div class="addLecture span12">
             <form ng-submit="newLecture()">
@@ -36,10 +36,19 @@
                                 <div class="span6 ">
                                     <a href="#" class="pull-right">Edit <i class="icon-pencil"></i></a>
                                     <ul class="comments clearfix">
-                                        <li ng-show="!lecture.comments.length">No comments.</li>
                                         <li ng-repeat="comment in lecture.comments">
                                             <a href="#">{{comment.Name}}</a>
                                             <p class="comment">{{comment.CommentText}}</p>
+                                        </li>
+                                        <li ng-show="!lecture.comments.length">No comments.</li>
+                                        <li>
+                                            <form ng-submit="newComment(lecture, this)">
+                                                <p>
+                                                    <label for="commentName">Name</label><input type="text" id="commentName" ng-model="newCommentName" required />
+                                                    <label for="commentText">Text</label><input type="text" id="commaneText" ng-model="newCommentText" required />
+                                                    <button class="btn icon-plus" ng-click="submit()"></button>
+                                                </p>
+                                            </form>
                                         </li>
                                     </ul>
                                 </div>

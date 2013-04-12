@@ -17,7 +17,6 @@ app.directive('lectureRepeatDirective', function ($http) {
         
         var pubAgo = Date.now() - new Date(scope.lecture.PubDate).getTime();      
 
-        
         var minSince = Math.floor(pubAgo / 60000);
         var hrsSince = Math.floor(minSince / 60);
         var daysSince = Math.floor(hrsSince / 24);
@@ -28,8 +27,6 @@ app.directive('lectureRepeatDirective', function ($http) {
             scope.lecture.PubDate = hrsSince + ' hours ago';
         else if(minSince != 0)
             scope.lecture.PubDate = minSince + ' minutes ago';
-
-        
 
         scope.$watch('lecture', function () {
             // Called when the scope is updated/changed. we need?
