@@ -25,7 +25,7 @@
                 <div class="accordion-group" ng-repeat="lecture in lectures" lecture-repeat-directive>
                     <div class="accordion-heading">
                         <a class="accordion-toggle" data-toggle="collapse" data-parent="#lectureList" href="#lecture{{lecture.ID}}" ng-cloak>{{lecture.LectureTitle}}
-                           <span class="pull-right">{{lecture.PubDate}} - {{lecture.TeacherName}}</span></a>
+                           <span class="pull-right">{{lecture.PubDate|timeAgo}} - {{lecture.TeacherName}}</span></a>
                     </div>
                     <div id="lecture{{lecture.ID}}" class="accordion-body collapse">
                         <div class="accordion-inner">
