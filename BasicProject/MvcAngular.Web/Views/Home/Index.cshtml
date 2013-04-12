@@ -34,19 +34,21 @@
                                     <iframe width="100%" height="315" src="{{lecture.LectureURL}}" frameborder="0" allowfullscreen></iframe>
                                 </div>
                                 <div class="span6 ">
-                                    <a href="#" class="pull-right">Edit <i class="icon-pencil"></i></a>
+                                   <!-- unimplemented edit button 
+                                        <a href="#" class="pull-right">Edit <i class="icon-pencil"></i></a>
+                                       -->
                                     <ul class="comments clearfix">
                                         <li ng-repeat="comment in lecture.comments">
-                                            <a href="#">{{comment.Name}}</a>
+                                            <p>{{comment.Name}} {{ comment.CommentTime|timeAgo }}</p>
                                             <p class="comment">{{comment.CommentText}}</p>
                                         </li>
                                         <li ng-show="!lecture.comments.length">No comments.</li>
                                         <li>
                                             <form ng-submit="newComment(lecture, this)">
                                                 <p>
-                                                    <label for="commentName">Name</label><input type="text" id="commentName" ng-model="newCommentName" required />
-                                                    <label for="commentText">Text</label><input type="text" id="commaneText" ng-model="newCommentText" required />
-                                                    <button class="btn icon-plus" ng-click="submit()"></button>
+                                                    <label for="commentName">Nick:</label><input type="text" id="commentName" ng-model="newCommentName" required />
+                                                    <label for="commentText">Comment:</label><input type="text" id="commentText" ng-model="newCommentText" required />
+                                                    <button class="btn btn-primary" ng-click="submit()" >Submit</button>
                                                 </p>
                                             </form>
                                         </li>
