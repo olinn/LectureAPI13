@@ -5,7 +5,15 @@
    ========================================================================== */
 
 
+#commentText {
+	width: 400px;
+}
 
+.addLecture p {
+	font-weight:bold;
+	display: inline;
+	
+}
 
 body {
 
@@ -22,6 +30,41 @@ body {
 
 .comments li:first-child {
     border-top: 0px none;
+}
+
+
+.thebox {
+
+	
+	background-color: #f7f7f7;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.titlebar h3 {
+	margin-left:0;
+
+	
+}
+
+.lecturelist {
+
+
+}
+
+.addLecture { 
+	margin-bottom: 5px;
+	
+
+}
+
+
+
+footer {
+
+	float:left;
+	margin-left: 20%;
 }
 
 /* Large desktop */
@@ -99,7 +142,7 @@ body {
 	.addLecture p
 	 {
 		
-		font-size: 60%;
+		font-size: 80%;
 		display:block;
 	} 
 
@@ -110,16 +153,17 @@ body {
 
 	input[type="text"]
 	{
-		height:8px;
-		font-size:8px;
+
+		height:16px;
+		font-size:12px;
 		margin-bottom: 3px;
 		
 	}
 
 	input[type="url"]
 	{
-		height:8px;
-		font-size:8px;
+		height:16px;
+		font-size:12px;
 		margin-bottom: 3px;
 		
 	}
@@ -147,8 +191,9 @@ body {
 
 	input[type="text"]
 	{
+		
 		height:12px;
-		font-size:10px;
+		font-size:8px;
 		margin-bottom: 5px;
 		width: 200px;
 	}
@@ -156,7 +201,7 @@ body {
 	input[type="url"]
 	{
 		height:12px;
-		font-size:10px;
+		font-size:8px;
 		margin-bottom: 5px;
 		width: 200px;
 	}
@@ -169,57 +214,29 @@ body {
 
 	#commentText {
 	width: 200px;
-}
+	}
+
+	#commentName {
+	width: 100px;
+	}
+
+	#lectureTitleBar { 
+		text-overflow:ellipsis;
+		white-space:nowrap;
+		overflow:hidden;
+		width:200px;
+
+
+					}
 
  }
 
 
-.thebox {
-
-	
-	background-color: #f7f7f7;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-}
-
-.titlebar h3 {
-	margin-left:0;
-
-	
-}
-
-.lecturelist {
 
 
-}
-
-.addLecture { 
-	margin-bottom: 5px;
-	
-
-}
-
-.addLecture p {
-	font-weight:bold;
-	display: inline;
-	margin-bottom: 50px;
-	
 
 
-}
 
-footer {
-
-	float:left;
-	margin-left: 20%;
-}
-
-#commentName {}
-
-#commentText {
-	width: 400px;
-}
 
 
 
