@@ -14,9 +14,22 @@ app.directive('lectureRepeatDirective', function ($http) {
                 scope.lecture.comments = data;
             });
         });
+        
+        var pubAgo = Date.now() - new Date(scope.lecture.PubDate).getTime();      
 
-        var pubAgo = Date.now() - new Date(scope.lecture.PubDate).getTime();
-        scope.lecture.PubDate = Math.floor(pubAgo / 60000) + ' minutes ago';
+        
+        var minSince = Math.floor(pubAgo / 60000);
+        var hrsSince = Math.floor(minSince / 60);
+        var daysSince = Math.floor(hrsSince / 24);
+
+        if (daysSince > 0)
+            scope.lecture.PubDate = daysSince + ' days ago ';
+        else if (hrsSince > 0 )
+            scope.lecture.PubDate = hrsSince + ' hours ago';
+        else if(minSince != 0)
+            scope.lecture.PubDate = minSince + ' minutes ago';
+
+        
 
         scope.$watch('lecture', function () {
             // Called when the scope is updated/changed. we need?
