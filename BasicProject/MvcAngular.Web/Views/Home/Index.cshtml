@@ -34,12 +34,21 @@
                                     <iframe width="100%" height="315" src="{{lecture.LectureURL}}" frameborder="0" allowfullscreen></iframe>
                                 </div>
                                 <div class="span6 ">
-                                   <!-- unimplemented edit button 
-                                        <a href="#" class="pull-right">Edit <i class="icon-pencil"></i></a>
-                                       -->
+                                    <a href="#" class="pull-right" ng-click="editing = !editing">Edit <i class="icon-pencil"></i></a>
+                                    <div ng-show="editing">
+                                        <p>
+                                            <input type="text" ng-model="lecture.LectureTitle" />
+                                            <input type="text" ng-model="lecture.LectureURL" />
+                                        </p>
+                                        <p>
+                                            <button class="btn" ng-click="editing = false">Cancel</button>
+                                            <button class="btn btn-success" ng-click="lecture.$update(); editing = false">Save</button>
+                                            <button class="btn btn-danger" ng-click="lecture.$delete(); editing = false">Delete</button>
+                                        </p>
+                                    </div>
                                     <ul class="comments clearfix">
                                         <li ng-repeat="comment in lecture.comments">
-                                            <p><strong>{{comment.Name}} {{ comment.CommentTime|timeAgo }}</strong></p>
+                                            <p><strong>{{comment.Name}}</strong> <em>{{ comment.CommentTime|timeAgo }}</em></p>
                                             <p class="comment">{{comment.CommentText}}</p>
                                         </li>
                                         <li ng-show="!lecture.comments.length">No comments.</li>
