@@ -23,7 +23,7 @@
                 return daysSince + ' days ago';
             else if (hrsSince > 0)
                 return hrsSince + ' hours ago';
-            else if (minSince != 0)
+            else
                 return minSince + ' minutes ago';
         }
     })
